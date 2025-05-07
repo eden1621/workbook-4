@@ -46,6 +46,35 @@ public class Employee {
     public double getTotalPay() {
         return getRegularHours() * payRate + getOvertimeHours() * payRate * 1.5;
     }
+    public class Employee {
+        String employeeName;
+        double totalHoursWorked;
+        double startWorkTime;
+
+        // Create a new employee with a name
+        public Employee(String employeeName) {
+            this.employeeName = employeeName;
+            this.totalHoursWorked = 0;
+        }
+
+        // Start a work shift
+        public void punchIn(double time) {
+            startWorkTime = time;
+            System.out.println(employeeName + " started working at " + time + " o'clock.");
+        }
+
+        // End a work shift and calculate how long they worked
+        public void punchOut(double time) {
+            double hoursThisShift = time - startWorkTime;
+            totalHoursWorked += hoursThisShift;
+            System.out.println(employeeName + " stopped working at " + time + " o'clock. Worked " + hoursThisShift + " hours this shift.");
+        }
+
+        // Show how many hours the person has worked in total
+        public double getTotalHours() {
+            return totalHoursWorked;
+        }
+    }
 
 
 }

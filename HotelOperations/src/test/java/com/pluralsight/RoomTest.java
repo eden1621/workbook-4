@@ -20,4 +20,3 @@ class RoomTest {
     @Test
     public void testCheckInAlreadyOccupied() {
         room.checkIn();
-      

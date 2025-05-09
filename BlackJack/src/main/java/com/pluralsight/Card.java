@@ -65,4 +65,18 @@ public class Card {
     public void flip() {
         isFaceUp = !isFaceUp;
     }
+    int getPoints() {
+        if (value.equals("Jack") || value.equals("Queen") || value.equals("King")) {
+            return 10;
+        } else if (value.equals("Ace")) {
+            return 11;
+        } else {
+            return Integer.parseInt(value);
+        }
+    }
+
+    public String toString() {
+        return value + " of " + suit;
+    }
+
 }

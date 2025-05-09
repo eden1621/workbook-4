@@ -1,5 +1,8 @@
 package com.pluralsight;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Player {
     private String name;//Name of player
     private Hand hand; //Hand of cards for each player
@@ -16,4 +19,6 @@ public class Player {
     public Hand getHand() {
         return hand;
     }
+
+
 }
